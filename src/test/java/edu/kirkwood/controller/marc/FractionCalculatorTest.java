@@ -1,6 +1,6 @@
 package edu.kirkwood.controller.marc;
 
-import edu.kirkwood.model.Fraction;
+import edu.kirkwood.model.marc.Fraction;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
