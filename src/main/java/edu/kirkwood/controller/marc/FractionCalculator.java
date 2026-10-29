@@ -1,6 +1,6 @@
 package edu.kirkwood.controller.marc;
 
-import edu.kirkwood.model.Fraction;
+import edu.kirkwood.model.marc.Fraction;
 
 import static edu.kirkwood.view.Messages.fractionGoodbye;
 import static edu.kirkwood.view.Messages.fractionGreet;
@@ -54,7 +54,12 @@ public class FractionCalculator {
             } else if(operator.equals("*")) {
                 result = f1.multiply(f2);
             } else if(operator.equals("/")) {
-                result = f1.divide(f2);
+                try {
+                    result = f1.divide(f2);
+                } catch (ArithmeticException e) {
+                    displayError(e.getMessage());
+                    continue;
+                }
             }
             // Display output
             System.out.printf("Result: %s %s %s = %s%n%n",
