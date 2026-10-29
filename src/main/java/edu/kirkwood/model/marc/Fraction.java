@@ -1,4 +1,4 @@
-package edu.kirkwood.model;
+package edu.kirkwood.model.marc;
 
 import java.util.Objects;
 
